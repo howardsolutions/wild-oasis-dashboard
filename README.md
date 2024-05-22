@@ -1,8 +1,11 @@
-# React + Vite
+# What I learned from building this project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+👉 Professional large frontend application planning.
 
-Currently, two official plugins are available:
+👉 Relational Data modeling with Supabase
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+👉 Building large React application with best libraries in React Ecosystem
+
+👉 Managing Remote Server state in application with React Query, there's no Redux in this application
+
+👉 Managing Complext Form validation with React Hook Form.
