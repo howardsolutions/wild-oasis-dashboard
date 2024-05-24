@@ -5,6 +5,7 @@ import { useCreateCabin, useDeleteCabin } from './queries';
 import { HiPencil, HiSquare2Stack, HiTrash } from 'react-icons/hi2';
 import Modal from '../../ui/Modal';
 import ConfirmDelete from '../../ui/ConfirmDelete';
+import Menus from '../../ui/Menus';
 
 const TableRow = styled.div`
   display: grid;
@@ -58,7 +59,7 @@ function CabinRow({ cabin }) {
 
   const { isDeleting, mutate: deleteCabin } = useDeleteCabin();
 
-  const { createCabin, isCreating } = useCreateCabin();
+  const { createCabin } = useCreateCabin();
 
   function handleDuplicate() {
     createCabin({
@@ -72,20 +73,18 @@ function CabinRow({ cabin }) {
   }
 
   return (
-    <TableRow role='row'>
-      <Img src={image} />
-      <Cabin>{name}</Cabin>
-      <div>Fits up to {maxCapacity} guests</div>
-      <Price>{formatCurrency(regularPrice)}</Price>
-      {discount ? (
-        <Discount>{formatCurrency(discount)}</Discount>
-      ) : (
-        <span>&mdash;</span>
-      )}
-      <div>
-        <button disabled={isCreating} onClick={handleDuplicate}>
-          <HiSquare2Stack />
-        </button>
+    <Menus>
+      <TableRow role='row'>
+        <Img src={image} />
+        <Cabin>{name}</Cabin>
+        <div>Fits up to {maxCapacity} guests</div>
+        <Price>{formatCurrency(regularPrice)}</Price>
+        {discount ? (
+          <Discount>{formatCurrency(discount)}</Discount>
+        ) : (
+          <span>&mdash;</span>
+        )}
+
         <Modal>
           <Modal.Open opensWindowName='edit'>
             <button>
@@ -110,8 +109,22 @@ function CabinRow({ cabin }) {
             />
           </Modal.Window>
         </Modal>
-      </div>
-    </TableRow>
+
+        <Menus.Menu>
+          <Menus.Toggle id={cabinId} />
+
+          <Menus.List id={cabinId}>
+            <Menus.Button icon={<HiSquare2Stack />} onClick={handleDuplicate}>
+              Duplicate
+            </Menus.Button>
+
+            <Menus.Button icon={<HiPencil />}>Edit</Menus.Button>
+
+            <Menus.Button icon={<HiTrash />}>Delete</Menus.Button>
+          </Menus.List>
+        </Menus.Menu>
+      </TableRow>
+    </Menus>
   );
 }
 
