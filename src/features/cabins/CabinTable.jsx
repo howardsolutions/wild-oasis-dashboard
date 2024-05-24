@@ -15,6 +15,20 @@ function getFilteredCabins(filteredDiscountValue, cabins) {
   }
 }
 
+function getSortedCabins(filteredCabins, sortBy) {
+  const [field, direction] = sortBy.split('-');
+
+  const modified = direction === 'asc' ? 1 : -1;
+  // By default sort of JS will be in ascending order, return 1 will keep the order,
+  // -1 will reverse the order
+
+  const sortedCabins = filteredCabins.sort(
+    (a, b) => (a[field] - b[field]) * modified
+  );
+
+  return sortedCabins;
+}
+
 function CabinTable() {
   const { isLoading, cabins } = useCabins();
   const [searchParams] = useSearchParams();
@@ -22,8 +36,11 @@ function CabinTable() {
   if (isLoading) return <Spinner />;
 
   const filteredDiscountValue = searchParams.get('discount') || 'all';
+  const sortBy = searchParams.get('sortBy') || 'name-asc';
 
   let filteredCabins = getFilteredCabins(filteredDiscountValue, cabins);
+
+  let sortedCabins = getSortedCabins(filteredCabins, sortBy);
 
   return (
     <Table role='table' columns='0.6fr 1.8fr 2.2fr 1fr 1fr 1fr'>
@@ -37,7 +54,7 @@ function CabinTable() {
       </Table.Header>
 
       <Table.Body
-        data={filteredCabins}
+        data={sortedCabins}
         render={(cabin) => <CabinRow cabin={cabin} key={cabin.id} />}
       />
     </Table>

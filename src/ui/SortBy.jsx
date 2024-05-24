@@ -9,7 +9,16 @@ function SortBy({ options }) {
     setSearchParams(searchParams);
   }
 
-  return <Select type='white' options={options} onChange={handleChange} />;
+  const sortBy = searchParams.get('sortBy') || 'name-asc';
+
+  return (
+    <Select
+      type='white'
+      value={sortBy}
+      options={options}
+      onChange={handleChange}
+    />
+  );
 }
 
 export default SortBy;
