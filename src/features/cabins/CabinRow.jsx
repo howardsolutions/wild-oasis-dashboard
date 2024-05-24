@@ -73,34 +73,41 @@ function CabinRow({ cabin }) {
   }
 
   return (
-    <Menus>
-      <TableRow role='row'>
-        <Img src={image} />
-        <Cabin>{name}</Cabin>
-        <div>Fits up to {maxCapacity} guests</div>
-        <Price>{formatCurrency(regularPrice)}</Price>
-        {discount ? (
-          <Discount>{formatCurrency(discount)}</Discount>
-        ) : (
-          <span>&mdash;</span>
-        )}
+    <TableRow role='row'>
+      <Img src={image} />
+      <Cabin>{name}</Cabin>
+      <div>Fits up to {maxCapacity} guests</div>
+      <Price>{formatCurrency(regularPrice)}</Price>
+      {discount ? (
+        <Discount>{formatCurrency(discount)}</Discount>
+      ) : (
+        <span>&mdash;</span>
+      )}
 
+      <Menus>
         <Modal>
-          <Modal.Open opensWindowName='edit'>
-            <button>
-              <HiPencil />
-            </button>
-          </Modal.Open>
+          <Menus.Menu>
+            <Menus.Toggle id={cabinId} />
+
+            <Menus.List id={cabinId}>
+              <Menus.Button icon={<HiSquare2Stack />} onClick={handleDuplicate}>
+                Duplicate
+              </Menus.Button>
+
+              <Modal.Open opensWindowName='edit'>
+                <Menus.Button icon={<HiPencil />}>Edit</Menus.Button>
+              </Modal.Open>
+
+              <Modal.Open opensWindowName='delete'>
+                <Menus.Button icon={<HiTrash />}>Delete</Menus.Button>
+              </Modal.Open>
+            </Menus.List>
+          </Menus.Menu>
 
           <Modal.Window name='edit'>
             <CreateCabinForm cabinToEdit={cabin} />
           </Modal.Window>
 
-          <Modal.Open opensWindowName='delete'>
-            <button>
-              <HiTrash />
-            </button>
-          </Modal.Open>
           <Modal.Window name='delete'>
             <ConfirmDelete
               resource='cabins'
@@ -109,22 +116,8 @@ function CabinRow({ cabin }) {
             />
           </Modal.Window>
         </Modal>
-
-        <Menus.Menu>
-          <Menus.Toggle id={cabinId} />
-
-          <Menus.List id={cabinId}>
-            <Menus.Button icon={<HiSquare2Stack />} onClick={handleDuplicate}>
-              Duplicate
-            </Menus.Button>
-
-            <Menus.Button icon={<HiPencil />}>Edit</Menus.Button>
-
-            <Menus.Button icon={<HiTrash />}>Delete</Menus.Button>
-          </Menus.List>
-        </Menus.Menu>
-      </TableRow>
-    </Menus>
+      </Menus>
+    </TableRow>
   );
 }
 
