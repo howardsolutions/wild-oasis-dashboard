@@ -43,7 +43,8 @@ function Filter({ filterField, options }) {
     setSearchParams(searchParams);
   }
 
-  const currentSearchParams = searchParams.get('discount') || 'all';
+  const currentSearchParams =
+    searchParams.get('discount') || searchParams.get('status') || 'all';
 
   return (
     <StyledFilter>
