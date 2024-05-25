@@ -20,8 +20,20 @@ Choosing suitable Technology Stack for high quality frontend development.
 
 🔵 Write highly reusable React Functional Component, with custom styling by leveraging `styled-component`
 
-Examples: Reusable Modal Component, Confirm Component, and Table Component with custom styling, and Compount Pattern.
+Examples: Reusable Modal Component, Confirm Component, and Table Component with custom styling, and Compount Pattern, Select, Sort, Filter...
 
 🔵 This application built with `Performance and Accessibility` in mind.
 
 🔵 Applied Advanced React Patterns likes Custom Hooks, High Order Component (HOC), Render Props, Compound components.
+
+# Main Features
+
+## Cabins
+
+## Authentication
+
+## Booking
+
+## Checkin - Checkout
+
+## Dashboard

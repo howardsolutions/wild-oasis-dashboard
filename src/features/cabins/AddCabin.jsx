@@ -6,7 +6,9 @@ function AddCabin() {
   return (
     <Modal>
       <Modal.Open opensWindowName='cabin-form'>
-        <Button>Add New Cabin</Button>
+        <Button style={{ fontSize: '14px', width: '12%' }}>
+          Add New Cabin
+        </Button>
       </Modal.Open>
 
       <Modal.Window name='cabin-form'>
