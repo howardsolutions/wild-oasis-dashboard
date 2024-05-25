@@ -93,7 +93,7 @@ function Row({ children }) {
 
 // This Body leveraging the render-props pattern
 function Body({ data, render }) {
-  if (!data.length) return <Empty>No Data To Show At Current Moment</Empty>;
+  if (!data?.length) return <Empty>No Data To Show At Current Moment</Empty>;
 
   return <StyledBody>{data.map(render)}</StyledBody>;
 }

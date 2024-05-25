@@ -1,18 +1,17 @@
 // import BookingRow from './BookingRow';
 import Table from '../../ui/Table';
 import Menus from '../../ui/Menus';
-import Empty from '../../ui/Empty';
 import { useBookings } from './queries';
 import BookingRow from './BookingRow';
 import Spinner from '../../ui/Spinner';
 import Pagination from '../../ui/Pagination';
 
 function BookingTable() {
-  const { bookings, isLoading } = useBookings();
+  const { bookings, isLoading, totalCount } = useBookings();
+
+  console.log(bookings);
 
   if (isLoading) return <Spinner />;
-
-  if (!bookings?.length) return <Empty resource='Bookings' />;
 
   return (
     <Menus>
@@ -34,7 +33,7 @@ function BookingTable() {
         />
 
         <Table.Footer>
-          <Pagination count={bookings.length} />
+          <Pagination count={totalCount} />
         </Table.Footer>
       </Table>
     </Menus>
