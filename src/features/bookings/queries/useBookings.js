@@ -8,7 +8,7 @@ function useBookings() {
 
   const [searchParams] = useSearchParams();
 
-  //////// FILTER
+  //////// FILTER   ////////
   const filteredValue = searchParams.get('status');
 
   const filter =
@@ -16,14 +16,14 @@ function useBookings() {
       ? null
       : { field: 'status', value: filteredValue };
 
-  //////// SORT
+  //////// SORT    ////////
   const sortByRaw = searchParams.get('sortBy') || 'startDate-desc';
 
   const [field, direction] = sortByRaw.split('-');
 
   let sortBy = { field, direction };
 
-  /////// PAGINATION
+  /////// PAGINATION   ////////
   const page = !searchParams.get('page') ? 1 : Number(searchParams.get('page'));
 
   const {
