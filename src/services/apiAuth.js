@@ -14,11 +14,11 @@ export async function login({ email, password }) {
 }
 
 export async function getCurrentUser() {
-  const { data, error } = await supabase.auth.getSession();
+  const { data: session } = await supabase.auth.getSession();
+  if (!session.session) return null;
 
-  if (!data.session) return null;
+  const { data, error } = await supabase.auth.getUser();
 
   if (error) throw new Error(error.message);
-
-  return data.user;
+  return data?.user;
 }
