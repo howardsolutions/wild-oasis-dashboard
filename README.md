@@ -84,7 +84,7 @@ Examples: Reusable Modal Component, Confirm Component, and Table Component with 
 
 ## Cabins
 
-## Authentication
+## Authentication, Authorization
 
 ## Booking
 
