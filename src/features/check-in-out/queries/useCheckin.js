@@ -14,7 +14,8 @@ function useCheckin() {
   const queryClient = useQueryClient();
 
   const { mutate: checkin, isLoading: isCheckingIn } = useMutation({
-    mutationFn: (bookingId) => updateBooking(bookingId, updateFieldsObj),
+    mutationFn: ({ bookingId, breakfast }) =>
+      updateBooking(bookingId, { ...updateFieldsObj, ...breakfast }),
     onSuccess: (data) => {
       toast.success(`Booking #${data.id} successfully checked in`);
       // invalidate all the current active query in the current page, don't have to remember query key
