@@ -10,7 +10,7 @@ export default function useBookingDetail() {
     error,
     isLoading,
   } = useQuery({
-    queryKey: ['booking'],
+    queryKey: ['booking', bookingId],
     queryFn: () => getBooking(bookingId),
 
     // By default, React Query will try to refetch 3 times before giving up
