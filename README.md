@@ -28,6 +28,22 @@ Booking table should be able to filter by these statuses.
 
 👉 Guest data : fullname, email, national ID, nationality, country flag
 
+---
+
+👍 The initial app screen should be a dashboard, to display important information for the Last 7 days, 30, 90 days.
+
+👉 A list of guest checking in and out on the current day. Users should be able to perform these tasks from here.
+
+👉 Statistics on recent booking, sales, checkins, occupancy rate
+
+👉 A chart showing all daily Hotel sales, showing both "total" and "extra" sales (extra sales - is only breakfast at the moment!)
+
+👉 A chart showing statistics on stay durations, as this is an important metric for the hotel.
+
+👍 Users should be able to define a few application-wide settings: price for breakfast, min max nights stay, max guest per booking
+
+👍 App needs Dark Mode.
+
 </details>
 
 # What I gained from building this project
