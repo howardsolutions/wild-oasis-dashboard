@@ -1,8 +1,10 @@
-# Application Requirements
+# Application Requirements 👀
 
 <details>
 
-<summary>Open to read (Long List) </summary>
+<summary>Open to read (Long List) 😵 😵</summary>
+
+<br />
 
 👉 This is the internal app of a Boutique Hotel, used like an internal tools for hotel Employees.
 They NEED to logged into the application to Perform any tasks.
@@ -46,7 +48,9 @@ Booking table should be able to filter by these statuses.
 
 </details>
 
-# What I gained from building this project
+<br />
+
+# What I gained from building this project 😎
 
 🔵 LITERRALY, this project is the single place I bundled EVERY SINGLE KNOWLEDGE I GAINNED about React into ONCE PLACE.
 
@@ -73,6 +77,8 @@ Examples: Reusable Modal Component, Confirm Component, and Table Component with 
 🔵 This application built with `Performance and Accessibility` in mind.
 
 🔵 Applied Advanced React Patterns likes Custom Hooks, High Order Component (HOC), Render Props, Compound components.
+
+<hr />
 
 # Main Features
 

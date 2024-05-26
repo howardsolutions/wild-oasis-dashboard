@@ -1,3 +1,4 @@
 import useCheckin from './useCheckin';
+import useCheckout from './useCheckout';
 
-export { useCheckin };
+export { useCheckin, useCheckout };
