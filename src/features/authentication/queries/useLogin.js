@@ -9,7 +9,7 @@ function useLogin() {
     mutationFn: ({ email, password }) => loginApi({ email, password }),
     onSuccess: (user) => {
       console.log(user, 'user!');
-      navigate('/dashboard');
+      navigate('/dashboard', { replace: true });
     },
     onError: () => {
       toast.error('Provider email or password is incorrect');
