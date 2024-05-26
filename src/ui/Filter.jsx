@@ -35,7 +35,7 @@ const FilterButton = styled.button`
   }
 `;
 
-function Filter({ filterField, options }) {
+function Filter({ filterField = '', options = [] }) {
   const [searchParams, setSearchParams] = useSearchParams();
 
   function handleClick(value) {
@@ -62,10 +62,5 @@ function Filter({ filterField, options }) {
     </StyledFilter>
   );
 }
-
-Filter.defaultProps = {
-  filterField: '',
-  options: [],
-};
 
 export default Filter;
