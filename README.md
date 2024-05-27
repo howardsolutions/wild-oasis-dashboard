@@ -68,7 +68,7 @@ Choosing suitable Technology Stack for high quality frontend development.
 
 🔵 Managing Remote Server state in application with React Query, there's no Redux in this application
 
-🔵 Managing Complex Form validation with React Hook Form.
+🔵 Managing Complex Form Fields State & validation with React Hook Form.
 
 🔵 Write highly reusable React Functional Component, with custom styling by leveraging `styled-component`
 
@@ -77,6 +77,8 @@ Examples: Reusable Modal Component, Confirm Component, and Table Component with 
 🔵 This application built with `Performance and Accessibility` in mind.
 
 🔵 Applied Advanced React Patterns likes Custom Hooks, High Order Component (HOC), Render Props, Compound components.
+
+🔵 Error Boundaries for production
 
 <hr />
 

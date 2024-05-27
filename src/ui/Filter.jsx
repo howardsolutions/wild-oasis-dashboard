@@ -45,7 +45,7 @@ function Filter({ filterField = '', options = [] }) {
   }
 
   const currentSearchParams =
-    searchParams.get('discount') || searchParams.get('status') || 'all';
+    searchParams.get(filterField) || options.at(0).value;
 
   return (
     <StyledFilter>
