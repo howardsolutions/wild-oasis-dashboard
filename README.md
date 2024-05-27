@@ -68,7 +68,7 @@ Choosing suitable Technology Stack for high quality frontend development.
 
 🔵 Managing Remote Server state in application with React Query, there's no Redux in this application
 
-🔵 Managing Complext Form validation with React Hook Form.
+🔵 Managing Complex Form validation with React Hook Form.
 
 🔵 Write highly reusable React Functional Component, with custom styling by leveraging `styled-component`
 
