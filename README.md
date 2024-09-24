@@ -1,8 +1,11 @@
 # Wild Oasis Dashboard
 
+![Banner](/images/banner.png)
+
 This is the internal app of a Boutique Hotel, used like an internal tools for hotel Employees.
 
 This hotel has a public website for Users, including all cabin details, price, booking information...
+
 
 ## Application Requirements 👀
 
@@ -59,14 +62,14 @@ Booking table should be able to filter by these statuses.
 
 ## Main Features & API Design 📡
 
-## Authentication
+## 1️⃣ Authentication
 - AUTHENTICATION
     - SIGNUP, LOGIN and LOGOUT
 - USER
     - GET Current user information
     - UPDATE  Current user information: name, password, avatar
 
-## Booking
+## 2️⃣ Booking
 - GET all bookings information
     - Filtering, Sorting, Pagination on Bookings List
 
@@ -74,7 +77,7 @@ Booking table should be able to filter by these statuses.
 
 - DELETE a booking with ID
 
-## Checkin - Checkout
+## 3️⃣ Checkin - Checkout
 - UPDATE Checkin / Checkout information on a booking with a ID
 
 ## Dashboard
@@ -82,12 +85,12 @@ Booking table should be able to filter by these statuses.
 - Display statistic information such as: Bookings, Sales, Checkins, Occupancy Rate
 
 
-## Cabins
+## 4️⃣ Cabins
 - GET ALL cabins information
 - CREATE and UPDATE Cabin Information
 - DELETE a cabin with an ID
 
-## Settings
+## 5️⃣ Settings
 - Including Form to update min, max booking length, max guest per booking, break fast price information on a cabin
 
 ## What I gained from building this project 😎
