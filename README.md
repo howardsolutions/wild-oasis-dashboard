@@ -1,4 +1,10 @@
-# Application Requirements 👀
+# Wild Oasis Dashboard
+
+This is the internal app of a Boutique Hotel, used like an internal tools for hotel Employees.
+
+This hotel has a public website for Users, including all cabin details, price, booking information...
+
+## Application Requirements 👀
 
 <details>
 
@@ -6,8 +12,7 @@
 
 <br />
 
-👉 This is the internal app of a Boutique Hotel, used like an internal tools for hotel Employees.
-They NEED to logged into the application to Perform any tasks.
+👉 Employee NEED to logged into the application to Perform any tasks.
 
 👉 New users can only be signed up from the inside the applications - to guarentee that only actual hotel employees can get Accounts.
 
@@ -50,7 +55,47 @@ Booking table should be able to filter by these statuses.
 
 <br />
 
-# What I gained from building this project 😎
+<hr />
+
+## Main Features & API Design 📡
+
+## Cabins
+
+## Authentication
+- AUTHENTICATION
+    - SIGNUP, LOGIN and LOGOUT
+- USER
+    - GET Current user information
+    - UPDATE  Current user information: name, password, avatar
+
+## Booking
+- GET all bookings information
+    - Filtering, Sorting, Pagination on Bookings List
+
+- GET Booking Details by ID - return all booking details and cabins, guests information related to this booking ID.
+
+- DELETE a booking with ID
+
+## Checkin - Checkout
+- UPDATE Checkin / Checkout information on a booking with a ID
+
+## Dashboard
+- Filter, Display recent bookings information by last 7, 30 and 90 days with Charts
+- Display statistic information such as: Bookings, Sales, Checkins, Occupancy Rate
+
+
+## Cabins
+- GET ALL cabins information
+- CREATE and UPDATE Cabin Information
+- DELETE a cabin with an ID
+
+## Settings
+- Including Form to update min, max booking length, max guest per booking, break fast price information on a cabin
+
+## What I gained from building this project 😎
+<details> 
+
+<summary>Open to read (Long List) 😵 😵</summary>
 
 🔵 LITERRALY, this project is the single place I bundled EVERY SINGLE KNOWLEDGE I GAINNED about React into ONCE PLACE.
 
@@ -80,16 +125,4 @@ Examples: Reusable Modal Component, Confirm Component, and Table Component with 
 
 🔵 Error Boundaries for production
 
-<hr />
-
-# Main Features
-
-## Cabins
-
-## Authentication, Authorization
-
-## Booking
-
-## Checkin - Checkout
-
-## Dashboard
+</details>

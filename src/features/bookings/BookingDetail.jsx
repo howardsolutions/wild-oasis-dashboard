@@ -16,6 +16,7 @@ import { HiArrowDownOnSquare } from 'react-icons/hi2';
 import useCheckout from '../check-in-out/queries/useCheckout';
 import Modal from '../../ui/Modal';
 import ConfirmDelete from '../../ui/ConfirmDelete';
+import Empty from '../../ui/Empty';
 
 const HeadingGroup = styled.div`
   display: flex;
@@ -39,6 +40,8 @@ function BookingDetail() {
   const moveBack = useMoveBack();
 
   if (isLoading || isCheckingOut || isDeleting) return <Spinner />;
+
+  if (!booking) return <Empty resource='booking' />;
 
   const { status, id } = booking;
 

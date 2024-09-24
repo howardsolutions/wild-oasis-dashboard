@@ -9,6 +9,7 @@ import Users from './pages/Users';
 import Settings from './pages/Settings';
 import Account from './pages/Account';
 import Login from './pages/Login';
+import Checkin from './pages/Checkin';
 
 // Global Style
 import GlobalStyles from './styles/GlobalStyles';
@@ -19,7 +20,6 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Toaster } from 'react-hot-toast';
 import BookingDetailsPage from './pages/BookingDetails';
-import Checkin from './pages/Checkin';
 import ProtectedRoute from './ui/ProtectedRoute';
 import { DarkModeProvider } from './context/DarkModeContext';
 
@@ -37,6 +37,7 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <ReactQueryDevtools initialIsOpen={false} />
         <GlobalStyles />
+        
         <BrowserRouter>
           <Routes>
             <Route
