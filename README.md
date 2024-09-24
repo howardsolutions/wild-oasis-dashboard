@@ -59,8 +59,6 @@ Booking table should be able to filter by these statuses.
 
 ## Main Features & API Design 📡
 
-## Cabins
-
 ## Authentication
 - AUTHENTICATION
     - SIGNUP, LOGIN and LOGOUT
