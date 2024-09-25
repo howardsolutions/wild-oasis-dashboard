@@ -60,7 +60,7 @@ Booking table should be able to filter by these statuses.
 
 <hr />
 
-## Main Features & API Design 📡
+## Main Features 📡
 
 ## 1️⃣ Authentication
 - AUTHENTICATION
